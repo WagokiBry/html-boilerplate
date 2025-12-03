@@ -43,6 +43,7 @@ let store = [];
             let inputValues = input.value;
             store.push(inputValues);
             input.value = "";
+            input.focus();
 
 let newItem = store[store.length-1];
             let list = document.createElement("li");

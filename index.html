@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Project Page</title>
+    <title>Shopping list example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <h1>My shopping list</h1>
+
+    <form>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </form>
+
+    <ul>
+
+    </ul>
+
+    <script>
+const form = document.querySelector("form");
+        const listUl = document.querySelector("ul");
+        const input = document.querySelector("#item");
+        const button = document.querySelector("button");
+let store = [];
+        let addItems = function () {
+            
+            let inputValues = input.value;
+            store.push(inputValues);
+            input.value = "";
+
+let newItem = store[store.length-1];
+            let list = document.createElement("li");
+                    let span = document.createElement("span");
+                    let newButton = document.createElement("button");
+                    list.appendChild(span);
+                    list.appendChild(newButton);
+                    listUl.appendChild(list);
+                    span.textContent = newItem;
+                    newButton.textContent = "DELETE";
+                }
+            
+            
+        
+
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            addItems()
+
+        });
+
+
+
+
+
+    </script>
 </body>
+
 </html>

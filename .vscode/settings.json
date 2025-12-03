@@ -1,0 +1,8 @@
+{
+    // 1. Set the basic setting to "null" so it doesn't default to the system browser (IE).
+    "liveServer.settings.CustomBrowser": null,
+    
+    // 2. Set the advanced command line to the full Linux path for the Windows Chrome EXE.
+    // This setting takes priority and will force Chrome to launch.
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe --remote-debugging-port=9222"
+}

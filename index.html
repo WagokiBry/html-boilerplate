@@ -1,76 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping list example</title>
-    <style>
-        li {
-            margin-bottom: 10px;
-        }
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
 
-        li button {
-            font-size: 12px;
-            margin-left: 20px;
-            color: #666;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h1>My shopping list</h1>
-
-    <form>
-        <label for="item">Enter a new item:</label>
-        <input type="text" name="item" id="item">
-        <button>Add item</button>
-    </form>
-
-    <ul>
-
-    </ul>
-
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+    
     <script>
-const form = document.querySelector("form");
-        const listUl = document.querySelector("ul");
-        const input = document.querySelector("#item");
-        const button = document.querySelector("button");
-let store = [];
-        let addItems = function () {
-            
-            let inputValues = input.value;
-            store.push(inputValues);
-            input.value = "";
-            input.focus();
 
-let newItem = store[store.length-1];
-            let list = document.createElement("li");
-                    let span = document.createElement("span");
-                    let newButton = document.createElement("button");
-                    list.appendChild(span);
-                    list.appendChild(newButton);
-                    listUl.appendChild(list);
-                    span.textContent = newItem;
-                    newButton.textContent = "DELETE";
-                }
-            
-            
-        
+// You have an array of words: ['a', 'b', 'a', 'c', 'b', 'a']. How would you use reduce() to count the 
+// frequency of each word and return an object like { a: 3, b: 2, c: 1 }?
 
+let addNum = {"a":2}
 
-        button.addEventListener("click", (e) => {
-            e.preventDefault();
-            addItems()
+addNum["a"] +=10;
 
-        });
-
+console.log(addNum)
 
 
 
 
     </script>
-</body>
+  </body>
 
 </html>

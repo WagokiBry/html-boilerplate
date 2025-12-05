@@ -17,28 +17,44 @@
 const people = [
       {
         name: "Carly",
-        yearOfBirth: 1942,
-        yearOfDeath: 1970,
+        yearOfBirth: 1942, //28 youngest
+        
       },
       {
         name: "Ray",
         yearOfBirth: 1962,
-        yearOfDeath: 2011,
+        yearOfDeath: 2011,  //49 oldest
       },
       {
         name: "Jane",
         yearOfBirth: 1912,
-        yearOfDeath: 1941,
+        yearOfDeath: 1941,  //29  second oldest
       },
     ]
 
 const findTheOldest = function(arr) {
 
-    let calcAge = arr.forEach((item)=>{
-        console.log( item.yearOfDeath - item.yearOfBirth)
+  let addedAge = arr.map((item)=>{
+
+    if(!item.yearOfDeath){
+      item["yearOfDeath"] = new Date ().getFullYear()
+    }
+return item
+
+  })
+
+  
+
+    let sorted =  addedAge.sort((a,b)=>{
+
+      let ageA = a.yearOfDeath - a.yearOfBirth;
+      let ageB = b.yearOfDeath - b.yearOfBirth;
+
+       return ageA - ageB
+ 
     })
 
-
+return sorted[sorted.length -1].name;
 };
 
 console.log(findTheOldest(people))

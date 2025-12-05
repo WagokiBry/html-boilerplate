@@ -14,11 +14,36 @@
 // You have an array of words: ['a', 'b', 'a', 'c', 'b', 'a']. How would you use reduce() to count the 
 // frequency of each word and return an object like { a: 3, b: 2, c: 1 }?
 
-let addNum = {"a":2}
+const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 1942,
+        yearOfDeath: 1970,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941,
+      },
+    ]
 
-addNum["a"] +=10;
+const findTheOldest = function(arr) {
 
-console.log(addNum)
+    let calcAge = arr.forEach((item)=>{
+        console.log( item.yearOfDeath - item.yearOfBirth)
+    })
+
+
+};
+
+console.log(findTheOldest(people))
+
+
 
 
 

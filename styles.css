@@ -53,3 +53,11 @@ a:visited{
 a:hover {
   text-decoration: none;
 }
+
+.container > p {
+font-size: 150%;
+}
+
+ .container > :first-child::first-line {
+   color: orangered;
+ }

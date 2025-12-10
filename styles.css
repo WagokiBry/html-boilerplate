@@ -31,3 +31,7 @@ span {
 #special {
     background: yellow;
 }
+
+.alert:not(.stop,.go){
+    border: 2px solid grey;
+}

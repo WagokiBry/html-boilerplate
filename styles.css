@@ -14,3 +14,8 @@
 .fresh {
     color: blueviolet;
 }
+
+html {
+    background:  red;
+    opacity: 0.33;
+}

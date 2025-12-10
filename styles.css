@@ -32,7 +32,7 @@ span {
     background: yellow;
 }
 
-.alert:not(.stop, .go){
+.alert{
     border: 2px solid grey;
 }
 
@@ -42,4 +42,14 @@ span {
 
 .alert.go{
     background: green;
+}
+
+a:link { color: blue; }
+
+a:visited{
+    color: red;
+}
+
+a:hover {
+  text-decoration: none;
 }

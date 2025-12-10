@@ -61,3 +61,8 @@ font-size: 150%;
  .container > :first-child::first-line {
    color: orangered;
  }
+
+ tr:nth-child(even){
+background-color: #333333;
+color: white;
+ }

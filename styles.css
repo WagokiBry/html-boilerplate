@@ -23,3 +23,7 @@ h2 {
     background: blue;
     color: white;
 }
+
+span {
+    font-size: 200%;
+}

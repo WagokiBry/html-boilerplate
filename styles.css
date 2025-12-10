@@ -8,3 +8,20 @@ ul.list > li {
     border-bottom: 1px solid gray;
 
 }
+
+a[title]{
+    border: 5px solid pink
+}
+
+a[href*="contact"] {
+    border: 5px solid orange;
+} 
+
+li {
+    margin: 0.5rem;
+    
+}
+
+a[href^="https"]{
+      border: 5px solid green;
+}

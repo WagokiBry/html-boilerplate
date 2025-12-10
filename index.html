@@ -8,65 +8,21 @@
   </head>
 
   <body>
-    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
     
-    <script>
-
-// You have an array of words: ['a', 'b', 'a', 'c', 'b', 'a']. How would you use reduce() to count the 
-// frequency of each word and return an object like { a: 3, b: 2, c: 1 }?
-
- const people = [
-      {
-        name: "Carly",
-        yearOfBirth: 1942,
-        
-      },
-      {
-        name: "Ray",
-        yearOfBirth: 1962,
-        yearOfDeath: 2011,
-      },
-      {
-        name: "Jane",
-        yearOfBirth: 1912,
-        yearOfDeath: 1941,
-      },
-    ]
-
-const findTheOldest = function (arr) {
-
-    arr.forEach((item) => {
-
-        if (!item.yearOfDeath) {
-            item["yearOfDeath"] = new Date().getFullYear();
-            
-        }
-        
-      })
-     arr.sort((a, b) => {
-
-        let ageA = a.yearOfDeath - a.yearOfBirth;
-        let ageB = b.yearOfDeath - b.yearOfBirth;
-
-        return ageA - ageB
-
-    })
-return arr.pop()
-  }
-
-
-
-
-console.log(findTheOldest(people).name)
-
-
-
-
-
-
-
-
-    </script>
+ <div class="container">
+  <h1>This is a heading</h1>
+  <p>
+    Veggies es <span>bonus vobis</span>, proinde vos postulo essum magis
+    kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean
+    garlic.
+  </p>
+  <h2>A level 2 heading</h2>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</div>
   </body>
 
 </html>

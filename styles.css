@@ -32,6 +32,14 @@ span {
     background: yellow;
 }
 
-.alert:not(.stop,.go){
+.alert:not(.stop, .go){
     border: 2px solid grey;
+}
+
+.alert.stop{
+    background: red;
+}
+
+.alert.go{
+    background: green;
 }

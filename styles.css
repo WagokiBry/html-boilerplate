@@ -1,27 +1,19 @@
-h2 + p {
-    color: red;
+:root {
+  --main-color: red;
 }
 
-ul.list > li {
-
-    list-style-type: none;
-    border-bottom: 1px solid gray;
-
+.cool-paragraph {
+  color: var(--main-color);
 }
 
-a[title]{
-    border: 5px solid pink
+.exciting-paragraph {
+  background-color: var(--main-color);
 }
 
-a[href*="contact"] {
-    border: 5px solid orange;
-} 
-
-li {
-    margin: 0.5rem;
-    
+button {
+  --spread: 5px;
+  box-shadow: 0 0 20px var(--spread) black;
 }
-
-a[href^="https"]{
-      border: 5px solid green;
+button:hover {
+  --spread: 10px;
 }

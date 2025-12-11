@@ -1,19 +1,7 @@
-:root {
-  --main-color: red;
+:root{
+    --text-color : rgb(0, 255, 60);
 }
 
-.cool-paragraph {
-  color: var(--main-color);
-}
-
-.exciting-paragraph {
-  background-color: var(--main-color);
-}
-
-button {
-  --spread: 5px;
-  box-shadow: 0 0 20px var(--spread) black;
-}
-button:hover {
-  --spread: 10px;
+p{
+    color: var(--text-color)
 }

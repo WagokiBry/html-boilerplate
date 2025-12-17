@@ -1,0 +1,5 @@
+/* blue placeholder on email fields */
+input[type="email"]::placeholder {
+  background-color: red;
+  color: white;
+}

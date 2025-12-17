@@ -142,7 +142,7 @@
 
 function Book (title, author, pages, readNotRead){
     if(!new.target){
-        throw console.error("You must use the new keyword to call the constructor");
+        throw Error("You must use the new keyword to call the constructor");
         
     }
     this.title = title;
@@ -154,6 +154,6 @@ function Book (title, author, pages, readNotRead){
     }
 }
 
-const theHobit = new Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet")
+const theHobit =  Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet")
 console.log(theHobit.info())
 

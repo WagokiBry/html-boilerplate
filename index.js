@@ -138,25 +138,22 @@
 // let sorted = copy.sort((a,b) => a.localeCompare(b, {sensitive:"base"}));
 // console.log(sorted)
 
-console.log("hi")
+"The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
 
-function Player(name,marker){
+function Book (title, author, pages, readNotRead){
     if(!new.target){
         throw console.error("You must use the new keyword to call the constructor");
         
     }
-    this.name = name;
-    this.marker  = marker;
-    this.sayName = function() {
-    console.log(this.name)
-  };
+    this.title = title;
+    this.author= author;
+    this.pages = pages;
+    this.readNotRead = readNotRead;
+    this.info = function(){
+        return`${this.title} by ${this.author}, ${this.pages} pages ${this.readNotRead}`
+    }
 }
 
-const playerOne = new Player ("Bryan","X");
-
-playerOne.name
-playerOne.marker
-console.log(playerOne.name)
-console.log(playerOne.marker)
-console.log(playerOne.sayName())
+const theHobit = new Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet")
+console.log(theHobit.info())
 

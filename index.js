@@ -69,61 +69,61 @@
 //   });
 // });
 
-console.log("hi")
-function camelize(str){
-   let arr = str.split("-")
+// console.log("hi")
+// function camelize(str){
+//    let arr = str.split("-")
 
-let fillString = []
-for(let i = 0 ; i < arr.length ; i++){
+// let fillString = []
+// for(let i = 0 ; i < arr.length ; i++){
     
-    if(i === 0){
-        fillString.push(arr[i].toLowerCase()) ;
-    }
-    else if(i>0){
-        let actioned = arr[i].at(0).toUpperCase() + arr[i].slice(1)
-        fillString.push(actioned) ; 
-    }
-}
-return fillString.join("");
+//     if(i === 0){
+//         fillString.push(arr[i].toLowerCase()) ;
+//     }
+//     else if(i>0){
+//         let actioned = arr[i].at(0).toUpperCase() + arr[i].slice(1)
+//         fillString.push(actioned) ; 
+//     }
+// }
+// return fillString.join("");
 
-}
+// }
 
-function filterRange(arr, min, max){
+// function filterRange(arr, min, max){
 
-     if(min > max){
-        let temp = min;
-        max = min;
-        min = temp;
-    }
-let newArr = []
-    for (let i = 0; i < arr.length; i++){
-   if(arr[i] >= min && arr[i]<=max){
-newArr.push(arr[i])
-   }
-}
-return newArr;
+//      if(min > max){
+//         let temp = min;
+//         max = min;
+//         min = temp;
+//     }
+// let newArr = []
+//     for (let i = 0; i < arr.length; i++){
+//    if(arr[i] >= min && arr[i]<=max){
+// newArr.push(arr[i])
+//    }
+// }
+// return newArr;
 
-}
+// }
 
-function filterRangeInPlace(arr, min, max){
+// function filterRangeInPlace(arr, min, max){
 
-     if(min > max){
-        let temp = min;
-        max = min;
-        min = temp;
-    }
+//      if(min > max){
+//         let temp = min;
+//         max = min;
+//         min = temp;
+//     }
 
-    for (let i = 0; i < arr.length; i++){
-   if(arr[i] < min || arr[i]>max){
-arr.splice(i,1)
-   }
-}
-return arr;
+//     for (let i = 0; i < arr.length; i++){
+//    if(arr[i] < min || arr[i]>max){
+// arr.splice(i,1)
+//    }
+// }
+// return arr;
 
-}
+// }
 
 
-let arr = ["HTML", "javaScript","Java", "CSS"];
+// let arr = ["HTML", "javaScript","Java", "CSS"];
 
 // let sorted = copySorted(arr);
 
@@ -138,7 +138,25 @@ let arr = ["HTML", "javaScript","Java", "CSS"];
 // let sorted = copy.sort((a,b) => a.localeCompare(b, {sensitive:"base"}));
 // console.log(sorted)
 
+console.log("hi")
 
+function Player(name,marker){
+    if(!new.target){
+        throw console.error("You must use the new keyword to call the constructor");
+        
+    }
+    this.name = name;
+    this.marker  = marker;
+    this.sayName = function() {
+    console.log(this.name)
+  };
+}
 
+const playerOne = new Player ("Bryan","X");
 
+playerOne.name
+playerOne.marker
+console.log(playerOne.name)
+console.log(playerOne.marker)
+console.log(playerOne.sayName())
 

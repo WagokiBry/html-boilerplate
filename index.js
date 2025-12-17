@@ -154,6 +154,21 @@ function Book (title, author, pages, readNotRead){
     }
 }
 
-const theHobit =  Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet")
+const theHobit = new Book("The Hobbit", "J.R.R Tolkien", "295", "not read yet")
 console.log(theHobit.info())
 
+console.log(theHobit)
+
+Object.getPrototypeOf(theHobit) === Book.prototype; // returns true
+
+let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+
+Object.setPrototypeOf(rabbit, animal)
+
+console.log(Object.getPrototypeOf(rabbit))
+console.log(animal.jumps)

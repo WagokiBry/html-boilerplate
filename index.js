@@ -1,3 +1,10 @@
+// "use strict";
+
+function show() {
+    console.log(this === undefined);
+}
+
+show(); // true
 // a <div> with a black border and pink background color with the following elements inside of it:
 // another <h1> that says “I’m in a div”
 // a <p> that says “ME TOO!”
@@ -173,8 +180,17 @@ let rabbit = {
 };
 
 console.log(Object.keys(rabbit))
-for(looper in rabbit){
-  console.log(looper)
+for(let looper in rabbit){
+  let ownProp = rabbit.hasOwnProperty(looper);
+
+  if(ownProp){
+    console.log(`Own: ${looper}`)
+  }
+  else {
+    if(!ownProp){
+    console.log(`Inherited: ${looper}`)
+  }
+  }
 }
 
 // Object.setPrototypeOf(rabbit, animal)
@@ -182,3 +198,29 @@ for(looper in rabbit){
 // console.log(Object.getPrototypeOf(rabbit))
 // console.log(animal.jumps)
 
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach.push(food);
+  }
+};
+
+let speedy = {
+  __proto__: hamster,
+  stomach: []
+};
+
+let lazy = {
+  __proto__: hamster,
+  stomach: []
+};
+
+// This one found the food
+speedy.eat("apple");
+alert( speedy.stomach ); // apple
+
+// This one also has it, why? fix please.
+alert( lazy.stomach ); 
+
+console.log(crypto.randomUUID())

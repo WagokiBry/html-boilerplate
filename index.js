@@ -7,9 +7,10 @@ let pages = document.querySelector("#pages");
 
 let arr = [];
 
-function Book (tit, page) {
+function Book (tit, page,id) {
      this.title = tit;
       this.pages = page;
+      this.id = crypto.randomUUID()
   }
 
 
@@ -20,4 +21,4 @@ arr.push(harry);
 title.value = "";
 pages.value = "";
 })
-log(arr)
+

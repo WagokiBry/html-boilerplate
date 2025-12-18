@@ -162,13 +162,23 @@ console.log(theHobit)
 Object.getPrototypeOf(theHobit) === Book.prototype; // returns true
 
 let animal = {
-  eats: true
+  eats: true,
+  party: "yaaas!"
 };
 let rabbit = {
-  jumps: true
+  jumps: true,
+  food: "cabbage",
+  car: false,
+   __proto__: animal
 };
 
-Object.setPrototypeOf(rabbit, animal)
+console.log(Object.keys(rabbit))
+for(looper in rabbit){
+  console.log(looper)
+}
 
-console.log(Object.getPrototypeOf(rabbit))
-console.log(animal.jumps)
+// Object.setPrototypeOf(rabbit, animal)
+
+// console.log(Object.getPrototypeOf(rabbit))
+// console.log(animal.jumps)
+

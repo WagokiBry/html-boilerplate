@@ -16,7 +16,7 @@ pickup
 
 
 
-<script>
+<script >
 // function outer(){
 //   const outerVar = "Hey I am an outer var";
 
@@ -66,15 +66,48 @@ pickup
 // }
 // let user1 = new User("Bryan")
 // console.log(user1.display())
-class User {
-  name = prompt("Name, please?", "John");
+// class Button {
+//   constructor(value) {
+//     this.value = value;
+    
+//   }
+
+//   click() {
+//     console.log(this.value)
+//   }
+// }
+
+// let button = new Button("hello");
+// console.log(button.click())
+
+class Bryan {
+  constructor(name,age){
+this.name = name;
+this.age = age
+  }
+
+  sentence(){
+    console.log(`My name is ${this.name} and I am ${this.age} years old!`)
+  }
 }
 
-let user = new User();
-alert(user.name); // John
+// let bryan = new Bryan("wagoki", 78)
+// console.log(bryan.sentence())
 
-console.log(user)
+class Gradin extends Bryan {
+  constructor(name,age,jokes){
+    super(name,age)
 
+    this.jokes = jokes
+  }
+
+  jokeMeth(){
+    console.log(`I am just saying, ${this.jokes}`)
+  }
+}
+
+let gradin = new Gradin("gradin",456,"Biscuit si ugali")
+console.log(gradin.jokeMeth())
 </script>
   </body>
 

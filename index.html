@@ -66,22 +66,14 @@ pickup
 // }
 // let user1 = new User("Bryan")
 // console.log(user1.display())
-let user = {
-  get name() {
-    return this.me;
-  },
+class User {
+  name = prompt("Name, please?", "John");
+}
 
-  set name(value) {
-    if (value.length < 4) {
-      alert("Name is too short, need at least 4 characters");
-      return;
-    }
-    this.me = value;
-  }
-};
+let user = new User();
+alert(user.name); // John
 
-user.name = "Pete";
-alert(user.name); // Pete
+console.log(user)
 
 </script>
   </body>

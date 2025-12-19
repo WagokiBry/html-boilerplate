@@ -80,13 +80,20 @@ pickup
 // let button = new Button("hello");
 // console.log(button.click())
 
-let user = {
-  name:"bryan"
+class Private {
   
+  
+constructor(name){
+  this.name = name
 }
+ static display(x){
+    console.log(x.name + " " + "kalalel" )
+  }
+}
+const pers = new Private("bryan")
+Private.display(pers)
 
-// let bryan = new Private()
-console.log(user.hasOwnProperty("name"))
+
 </script>
   </body>
 

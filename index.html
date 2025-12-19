@@ -50,20 +50,31 @@ pickup
 // console.log(soccerGame())
 // soccerGame()
 
-class User {
-  constructor(name){
+// class User {
+//   constructor(name,here){
 
-    this.name = name;
+//     this.name = name;
 
+
+//   }
+//   sayHi(){
+//     return `Hi, ${this.name}`
+//   }
+//   display(){
+//     return this
+//   }
+// }
+// let user1 = new User("Bryan")
+// console.log(user1.display())
+
+let User = class {
+  sayHi() {
+    alert("Hello");
   }
-  sayHi(){
-    return `Hi, ${this.name}`
-  }
-}
-let user1 = new User("Bryan")
-console.log(user1.sayHi())
+};
 
-console.log(user1)
+let john = new User ("john")
+console.log(john)
 </script>
   </body>
 

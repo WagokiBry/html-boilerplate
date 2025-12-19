@@ -80,34 +80,13 @@ pickup
 // let button = new Button("hello");
 // console.log(button.click())
 
-class Bryan {
-  constructor(name,age){
-this.name = name;
-this.age = age
-  }
-
-  sentence(){
-    console.log(`My name is ${this.name} and I am ${this.age} years old!`)
-  }
+let user = {
+  name:"bryan"
+  
 }
 
-// let bryan = new Bryan("wagoki", 78)
-// console.log(bryan.sentence())
-
-class Gradin extends Bryan {
-  constructor(name,age,jokes){
-    super(name,age)
-
-    this.jokes = jokes
-  }
-
-  jokeMeth(){
-    console.log(`I am just saying, ${this.jokes}`)
-  }
-}
-
-let gradin = new Gradin("gradin",456,"Biscuit si ugali")
-console.log(gradin.jokeMeth())
+// let bryan = new Private()
+console.log(user.hasOwnProperty("name"))
 </script>
   </body>
 

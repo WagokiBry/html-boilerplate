@@ -11,9 +11,10 @@ function createUser (name) {
 let user1 = createUser("Bryan")
 
 console.log(user1)
+console.log({reputation: user1.getReputation()})
 
 function createPlayer (name, level) {
-  level = 67;
+ 
   const { getReputation, giveReputation } = createUser(name);
 const getLevel = ()=>level;
   const increaseLevel = () => level++;
@@ -22,7 +23,9 @@ const getLevel = ()=>level;
 }
 
 const created = createPlayer("Gradin",5);
-console.log(created)
+created.giveReputation()
+created.giveReputation()
+console.log({reputation: created.getReputation()})
 
 function createPlayers (name, level) {
   const user = createUser(name);
@@ -33,3 +36,4 @@ function createPlayers (name, level) {
 
 const josh = createPlayers("josh",67)
 console.log(josh)
+console.log(Object.keys(josh))

@@ -7,8 +7,9 @@
 // export const greeting = "Hello, Odinite!";
 // export const farewell = "Bye bye, Odinite!";
 
-export default function jokes (value){
-    console.log(value)
-}
+// export default function jokes (value){
+//     console.log(value)
+// }
 
 // export default "Brayyooo una default"
+

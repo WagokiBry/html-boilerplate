@@ -7,4 +7,4 @@
 export const greeting = "Hello, Odinite!";
 export const farewell = "Bye bye, Odinite!";
 
-export default "Brayyooo una default "
+export default "Brayyooo una default"

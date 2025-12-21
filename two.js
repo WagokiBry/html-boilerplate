@@ -8,11 +8,12 @@
 
 class Bryan {
     #name = "bryan"
+    bname = "bryan"
 }
 
 let inst = new Bryan();
 console.log(inst)
 
-console.log(inst.hasOwnProperty("name"))
+console.log(Object.keys(inst))
 
 console.log("hello")

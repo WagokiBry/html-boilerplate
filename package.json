@@ -1,0 +1,24 @@
+{
+  "name": "html-boilerplate",
+  "version": "1.0.0",
+  "description": "my first package",
+  "keywords": [
+    "first",
+    "package"
+  ],
+  "homepage": "https://github.com/WagokiBry/html-boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/WagokiBry/html-boilerplate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WagokiBry/html-boilerplate.git"
+  },
+  "license": "ISC",
+  "author": "bryan wagoki",
+  "type": "commonjs",
+  "main": "one.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

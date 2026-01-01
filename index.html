@@ -27,16 +27,22 @@ const server = {
     return new Promise((resolve, reject) => {
       // Simulating a delayed network call to the server
       setTimeout(() => {
-        resolve(this.people);
+        resolve(this.peopl);
       }, 2000);
     });
   },
 };
 
 async function getPersonsInfo(name) {
-  const people = await server.getPeople();
+    try {
+ const people = await server.getPeople();
   const person = people.find(person => { return person.name === name });
   return person;
+    }
+    catch(error){
+        throw new Error("Wozzzaaa, rudia selekta")
+    }
+ 
 }
 
 console.log(getPersonsInfo("Thor"))

@@ -12,21 +12,29 @@
         return {
             movement(){
 console.log("I move with four legs")
+            },
+            tail(){
+                console.log("I have a tail")
             }
         }
      }
 
-     let dog = animal();
-     dog.movement()
+  
 
      function cat (){
+       const {movement,tail} = animal()
         return {
             agile(){
                 console.log("I am quite agile")
-            }
+            },
+            movement,
+            tail
+            
         }
      }
 
+const lion = cat();
+console.log(lion.tail())
  
  
 

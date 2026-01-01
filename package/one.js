@@ -3,3 +3,5 @@ function bryan(string){
 }
 
 module.exports = bryan
+
+console.log("bryan")
